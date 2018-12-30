@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Java</title>
+  
+  <subtitle>JavaWeb</subtitle>
+  <link href="/DreamRiverForever.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://yoursite.com/"/>
+  <updated>2018-12-30T11:35:17.336Z</updated>
+  <id>https://yoursite.com/</id>
+  
+  <author>
+    <name>Deng Yu Wen</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>demo</title>
+    <link href="https://yoursite.com/2018/12/30/demo/"/>
+    <id>https://yoursite.com/2018/12/30/demo/</id>
+    <published>2018-12-30T11:35:17.000Z</published>
+    <updated>2018-12-30T11:35:17.336Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
