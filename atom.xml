@@ -6,7 +6,7 @@
   <link href="/DreamRiverForever.github.io/atom.xml" rel="self"/>
   
   <link href="https://yoursite.com/"/>
-  <updated>2018-12-30T15:33:55.272Z</updated>
+  <updated>2018-12-31T09:33:47.104Z</updated>
   <id>https://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SecondDay</title>
+    <link href="https://yoursite.com/2018/12/31/SecondDay/"/>
+    <id>https://yoursite.com/2018/12/31/SecondDay/</id>
+    <published>2018-12-31T07:58:25.000Z</published>
+    <updated>2018-12-31T09:33:47.104Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;I-O流&quot;&gt;&lt;a href=&quot;#I-O流&quot; class=&quot;headerlink&quot; title=&quot;I/O流&quot;&gt;&lt;/a&gt;&lt;center&gt;I/O流&lt;/center&gt;&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="I/O流" scheme="https://yoursite.com/categories/I-O%E6%B5%81/"/>
+    
+    
+      <category term="I/O" scheme="https://yoursite.com/tags/I-O/"/>
+    
+  </entry>
   
   <entry>
     <title>FirstDay</title>

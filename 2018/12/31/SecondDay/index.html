@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/DreamRiverForever.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/DreamRiverForever.github.io/css/main.css?v=6.6.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/DreamRiverForever.github.io/images/apple-touch-icon-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/DreamRiverForever.github.io/images/favicon-32x32-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/DreamRiverForever.github.io/images/favicon-16x16-next.png?v=6.6.0">
+
+
+  <link rel="mask-icon" href="/DreamRiverForever.github.io/images/logo.svg?v=6.6.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/DreamRiverForever.github.io/',
+    scheme: 'Gemini',
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="I/O流">
+<meta name="keywords" content="I&#x2F;O">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SecondDay">
+<meta property="og:url" content="https://yoursite.com/2018/12/31/SecondDay/index.html">
+<meta property="og:site_name" content="Java">
+<meta property="og:description" content="I/O流">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-31T09:33:47.104Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SecondDay">
+<meta name="twitter:description" content="I/O流">
+
+
+
+  <link rel="alternate" href="/DreamRiverForever.github.io/auto.xml" title="Java" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="https://yoursite.com/2018/12/31/SecondDay/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>SecondDay | Java</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/DreamRiverForever"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/DreamRiverForever.github.io/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Java</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">JavaWeb</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/DreamRiverForever.github.io/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/DreamRiverForever.github.io/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/DreamRiverForever.github.io/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/DreamRiverForever.github.io/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/DreamRiverForever.github.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yoursite.com/DreamRiverForever.github.io/2018/12/31/SecondDay/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Deng Yu Wen">
+      <meta itemprop="description" content="爱好Java，希望每天都进步">
+      <meta itemprop="image" content="/DreamRiverForever.github.io/images/bg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Java">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">SecondDay
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-12-31 15:58:25 / Modified: 17:33:47" itemprop="dateCreated datePublished" datetime="2018-12-31T15:58:25+08:00">2018-12-31</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/DreamRiverForever.github.io/categories/I-O流/" itemprop="url" rel="index"><span itemprop="name">I/O流</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="I-O流"><a href="#I-O流" class="headerlink" title="I/O流"></a><center>I/O流</center></h1><a id="more"></a>
+<h2 id="一-字节流-amp-amp-字符流"><a href="#一-字节流-amp-amp-字符流" class="headerlink" title="一.字节流 &amp;&amp; 字符流"></a>一.字节流 &amp;&amp; 字符流</h2><h3 id="1-FileInputStream-字节输入流"><a href="#1-FileInputStream-字节输入流" class="headerlink" title="1.FileInputStream 字节输入流"></a>1.FileInputStream 字节输入流</h3><pre><code>public class Demo1 {
+    public static void main(String[] args) throws IOException{
+        FileInputStream fis = new FileInputStream(&quot;xxx.txt&quot;);
+        int value;
+        while ((value=fis.read())!=-1)
+        {
+            System.out.println( value);
+        }
+            fis.close();
+
+
+    }
+}
+</code></pre><p>最低级的字节输入流，每次读入一个字节效率低。接下来介绍带有缓冲区的字节输入流。</p>
+<h3 id="2-FileOutputStream-字符输出流"><a href="#2-FileOutputStream-字符输出流" class="headerlink" title="2.FileOutputStream 字符输出流"></a>2.FileOutputStream 字符输出流</h3><pre><code>public class Demo02 {
+    public static void main(String[] args) throws IOException {
+        FileOutputStream fos = new FileOutputStream(&quot;yyy.txt&quot;);//如果想续写在第二个参数传true
+        int count=120;
+        while (count&gt;99){
+            fos.write(count);//写出的是int数据，文件上自动去除前24位0，形成8字节数据
+            count--;
+        }
+       fos.close();
+    }
+}
+</code></pre><p>每次写入一个字符，效率同样低</p>
+<h3 id="3-用字节数组来read-amp-write"><a href="#3-用字节数组来read-amp-write" class="headerlink" title="3.用字节数组来read() &amp; write()"></a>3.用字节数组来read() &amp; write()</h3><pre><code>public class Demo3 {
+    public static void main(String[] args) throws IOException {
+        FileInputStream fis = new FileInputStream(&quot;yyy.txt&quot;);
+        FileOutputStream fos = new FileOutputStream(&quot;copy.txt&quot;);
+        int lenght=fis.available();
+        byte[] bytes = new byte[lenght];//在读文件过程中不能写文件，也有可能导致大文件需要的数组太大，虚拟机不能分配大数组内存
+        fis.read(bytes);//文件上字节读入字节数组
+        fos.write(bytes);//字节数组中字节读入copy
+        fis.close();
+        fos.close();
+    }
+}
+</code></pre><p>通过fis.available()获取读入字节大小，创建一个同等大小的byte数组一次性读入，在将byte数组一次写出。相比于读一个字节与写一个字节效率提高许多，<br>但是当文件过大时，读取时间很长，在此期间不能够写文件必须等字节全部读入byte数组中才能写。而且JVM有时候不能分配太大的byte数组。所以不建议使用此方法。<br><br>建议使用下面小byte数组方法。</p>
+<pre><code>public class Demo4 {
+    public static void main(String[] args) throws IOException {
+        FileInputStream fis = new FileInputStream(&quot;xxx.txt&quot;);
+        FileOutputStream fos = new FileOutputStream(&quot;zzz.txt&quot;);
+        byte[] arr = new  byte[3];//建议1024*n，就是1024的整数倍
+        int len;
+        while ((len=fis.read(arr))!=-1){//如果不写arr返回的是AS2码值，len长度变了，write写入len个空字符。
+            fos.write(arr,0,len);//取消len后面的字符，防止重复
+        }
+        fis.close();
+        fos.close();
+    }
+}
+</code></pre><p>通过len获取读入数据长度非常有必要，当写byte中数据时，有可能此次读入的字节没有完全覆盖上次读入字节，导致写入多余的字节。通过len可以指定写入字节大区间，从而去除多余字节。</p>
+<h3 id="4-BufferedInputStream-amp-amp-BufferedOutputStream-带有缓冲区输入输出流"><a href="#4-BufferedInputStream-amp-amp-BufferedOutputStream-带有缓冲区输入输出流" class="headerlink" title="4.BufferedInputStream &amp;&amp; BufferedOutputStream 带有缓冲区输入输出流"></a>4.BufferedInputStream &amp;&amp; BufferedOutputStream 带有缓冲区输入输出流</h3><pre><code>public class Demo5 {
+    public static void main(String[] args)throws IOException {
+        FileInputStream fis = new FileInputStream(&quot;zzz.txt&quot;);
+        FileOutputStream fos = new FileOutputStream(&quot;zz.txt&quot;);
+        BufferedInputStream bis = new BufferedInputStream(fis);//带缓冲区的输入流
+        BufferedOutputStream bos = new BufferedOutputStream(fos);
+        int b;
+        while ((b=bis.read())!=-1){
+            bos.write(b);
+        }
+        bis.close();//flush也具备及时刷新功能，flush刷完还可以写，close关闭流。
+        bos.close();//具备刷新功能，关闭流之前刷新一次缓冲区，将缓冲区中的文件刷新到文件中。有可能缓冲区没有装满，没能传到文件中close可以强制把缓冲区中字节输出
+    }
+}
+</code></pre><p>通过装饰设计模式，在BufferedInputStream或BufferedOutputStream中传入对应的子类对象在对其进行包装实现更加强大的功能<br>。通过在内存中增加缓冲区实现byte同样的功能，BufferedInputStream继承于FilterInputStream，提供缓冲输入流功能。缓冲输入流相对于普通输入流的优势是，它提供了一个缓冲数组，每次调用read方法的时候，它首先尝试从缓冲区里读取数据，若读取失败（缓冲区无可读数据），<br>则选择从物理数据源（譬如文件）读取新数据（这里会尝试尽可能读取多的字节）放入到缓冲区中，<br>最后再将缓冲区中的内容部分或全部返回给用户.由于从缓冲区里读取数据远比直接从物理数据源（譬如文件）读取速度快。在每次读完结束都要刷新缓冲区即close方法，防止缓冲区没有装满而没有自动刷新丢失数据。</p>
+<h3 id="5-用字节流读-amp-写中文"><a href="#5-用字节流读-amp-写中文" class="headerlink" title="5.用字节流读 &amp; 写中文"></a>5.用字节流读 &amp; 写中文</h3><pre><code>public class Demo6 {
+    public static void main(String[] args) throws IOException {
+        FileInputStream fis = new FileInputStream(&quot;zw.txt&quot;);
+        FileOutputStream fos = new FileOutputStream(&quot;zw2.txt&quot;);
+            byte[] arr = new byte[3];
+            int len;
+            while ((len = fis.read(arr)) != -1) {
+                System.out.println(new String(arr,0,len));
+            }
+            fis.close();
+            fos.write(&quot;我六级挂了&quot;.getBytes());//转化为字节数组
+            fos.close();
+    }
+}
+</code></pre><p>由于utf-8中一个中文三个字节，所以byte大小设置3，如果设置不为3的倍数，比如读入4字节，通过String解析三个字节多一个字节就乱码，同时<br>后面的中文由于前面丢失一字节导致全部乱码。(不推荐使用)。通过字节流输出中文需要把中文转化为字节数组写出比较麻烦。</p>
+<h3 id="6-FileReader-amp-FileWriter-字符流输入输出流"><a href="#6-FileReader-amp-FileWriter-字符流输入输出流" class="headerlink" title="6.FileReader &amp; FileWriter 字符流输入输出流"></a>6.FileReader &amp; FileWriter 字符流输入输出流</h3><pre><code>public class Demo10 {
+    public static void main(String[] args)throws IOException {
+        FileReader fid = new FileReader(&quot;zw.txt&quot;);//字符流
+        int x;
+        while ((x=fid.read())!=-1){
+            System.out.print((char)x);
+        }
+        fid.close();
+    }
+}
+</code></pre><p><br></p>
+<pre><code>public class Demo11 {
+    public static void main(String[] args)throws IOException {
+        FileWriter fiw = new FileWriter(&quot;zw3.txx&quot;);
+        fiw.write(&quot;你好我是何佳楠&quot;);
+        fiw.close();
+
+    }
+}
+</code></pre><p>原理与字节流等同，但是FileReader提供read.line()方法，可以一次读入一行数据以\r\n结束</p>
+<pre><code>public class Demo12 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader(&quot;zzz.txt&quot;));
+        String line;
+        while ((line=br.readLine())!=null){//读一行
+            System.out.println(line);
+        }
+        br.close();
+    }
+}
+</code></pre><p>FileReader提供换行方法newLine()，可以换行，但是你也可以使用写入\r\n来换行，与\r\n相比newLine()全平台可用，后者只在windows下有用，推荐newLine()</p>
+<h3 id="7-LineNumberReader带行号的字符读入流"><a href="#7-LineNumberReader带行号的字符读入流" class="headerlink" title="7.LineNumberReader带行号的字符读入流"></a>7.LineNumberReader带行号的字符读入流</h3><pre><code>public class Demo14 {
+    public static void main(String[] args) throws IOException{
+        LineNumberReader lnr = new LineNumberReader(new FileReader(&quot;zzz.txt&quot;));
+        String line;
+        //lnr.setLineNumber(100);行号初始值得设定
+        while ((line=lnr.readLine())!=null){
+            System.out.println(lnr.getLineNumber()+&quot; &quot;+line);//加行号
+        }
+
+    }
+}
+</code></pre><p> 可以通过getLineNumber()方法获取行号。</p>
+<h3 id="8-SequenceInputStream合并流"><a href="#8-SequenceInputStream合并流" class="headerlink" title="8. SequenceInputStream合并流"></a>8. SequenceInputStream合并流</h3><pre><code>public class Demo18 {
+    public static void main(String[] args) throws IOException {
+        SequenceInputStream si = new SequenceInputStream(new FileInputStream(&quot;xxx.txt&quot;),new FileInputStream(&quot;xxxxx.txt&quot;));
+        FileOutputStream fos = new FileOutputStream(&quot;xx.txt&quot;);
+        int b;
+        while ((b=si.read())!=-1){
+            fos.write(b);
+        }
+        si.close();
+        fos.close();
+    }
+}
+</code></pre><p>将两个流合并成一个流，也可以将多个流整合在一起，在SequenceInputStream中传入枚举实例如下</p>
+<pre><code>public class Demo19 {
+    public static void main(String[] args) throws IOException {//可以用于歌曲串烧，多首个合在一起
+        Vector&lt;InputStream&gt; v = new Vector&lt;&gt;();
+        v.add(new FileInputStream(&quot;xx.txt&quot;));
+        v.add(new FileInputStream(&quot;xxx.txt&quot;));
+        v.add(new FileInputStream(&quot;xxxx.txt&quot;));
+        Enumeration&lt;InputStream&gt; en = v.elements();
+        SequenceInputStream sis = new SequenceInputStream(en);
+        FileOutputStream fos = new FileOutputStream(&quot;x.txt&quot;);
+        int b;
+        while ((b=sis.read())!=-1){
+            fos.write(b);
+        }
+        sis.close();
+        fos.close();
+    }
+}
+</code></pre><p>可以用于合并歌曲实现歌曲串烧</p>
+<h3 id="9-ByteArrayOutputStream内存输出流"><a href="#9-ByteArrayOutputStream内存输出流" class="headerlink" title="9.ByteArrayOutputStream内存输出流"></a>9.ByteArrayOutputStream内存输出流</h3><pre><code>public class Demo20 {
+    /*
+     * 内存输出流
+     */
+    public static void main(String[] args) throws IOException {
+        FileInputStream fis = new FileInputStream(&quot;zw.txt&quot;);
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        int b;
+        while ((b=fis.read())!=-1){
+            bos.write(b);//写入内存中
+        }
+       /* 
+        *byte[] arr = bos.toByteArray();//转为字节数组
+        *System.out.println(new String(arr));//转为字符串
+        */
+        System.out.println(bos.toString());//将缓冲区的内容转化为字符串
+        fis.close();
+    }
+}
+</code></pre><p><br></p>
+<pre><code>public class Demo21 {
+    public static void main(String[] args) throws IOException {
+        FileInputStream fis = new FileInputStream(&quot;zw.txt&quot;);
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        byte[] arr = new byte[5];//读字符流容易乱码
+        int len;
+        while ((len=fis.read(arr))!=-1){
+            bos.write(arr,0,len);//先读入内存
+        }
+        System.out.println(bos);//通过转成字符串
+
+    }
+}
+</code></pre><p>将缓冲区的内容转化为字符串，不用再通过String转化</p>
+<h3 id="10-RandomAccessFile"><a href="#10-RandomAccessFile" class="headerlink" title="10. RandomAccessFile"></a>10. RandomAccessFile</h3><p>RandomAccessFile是Java输入/输出流体系中功能最丰富的文件内容访问类，既可以<br>读取文件内容，也可以向文件输出数据。与普通的输入/输出流不同的是，<br>RandomAccessFile支持跳到文件任意位置读写数据，RandomAccessFile对象包含<br>一个记录指针，用以标识当前读写处的位置，当程序创建一个新的RandomAccessFile对象时，该对象的文件记录指针对于文件头（也就是0处），当读写n个字节后，<br>文件记录指针将会向后移动n个字节。除此之外，RandomAccessFile可以自由移动该记录指针。<br>RandomAccessFile包含两个方法来操作文件记录指针：</p>
+<ol>
+<li>long getFilePointer()：返回文件记录指针的当前位置</li>
+<li>void seek(long pos)：将文件记录指针定位到pos位置</li>
+</ol>
+<p>RandomAccessFile类在创建对象时，除了指定文件本身，还需要指定一个mode参数，该参数指定RandomAccessFile的访问模式，该参数有如下四个值：</p>
+<p>r：以只读方式打开指定文件。如果试图对该RandomAccessFile指定的文件执行写入方法则会抛出IOException<br><br>rw：以读取、写入方式打开指定文件。如果该文件不存在，则尝试创建文件<br><br>rws：以读取、写入方式打开指定文件。相对于rw模式，还要求对文件的内容或元数据的每个更新都同步写入到底层存储设备，默认情形下(rw模式下),是使用buffer的,只有cache满的或者使用RandomAccessFile.close()关闭流的时候儿才真正的写到文件<br><br>rwd：与rws类似，只是仅对文件的内容同步更新到磁盘，而不修改文件的元数据</p>
+<pre><code>public class RandomAccessRead {
+    public static void main(String[] args) {
+        if (args == null || args.length == 0) {
+            throw new RuntimeException(&quot;请输入路径&quot;);
+        }
+        RandomAccessFile raf = null;
+        try {
+            raf = new RandomAccessFile(args[0], &quot;r&quot;);
+            System.out.println(&quot;RandomAccessFile的文件指针初始位置:&quot; + raf.getFilePointer());
+            raf.seek(100);
+            byte[] bbuf = new byte[1024];
+            int hasRead = 0;
+            while ((hasRead = raf.read(bbuf)) &gt; 0) {
+                System.out.print(new String(bbuf, 0, hasRead));
+            }
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } finally {
+            try {
+                if (raf != null) {
+                    raf.close();
+                }
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+    }
+}
+</code></pre><h3 id="11-ObjectOutputStream-amp-ObjectInputStream对象输入输出流"><a href="#11-ObjectOutputStream-amp-ObjectInputStream对象输入输出流" class="headerlink" title="11.ObjectOutputStream &amp; ObjectInputStream对象输入输出流"></a>11.ObjectOutputStream &amp; ObjectInputStream对象输入输出流</h3><p>主要的作用是用于写入对象信息与读取对象信息。 对象信息一旦写到文件上那么对象的信息就可以做到持久化了。对象的输出流将指定的对象写入到文件的过程，就是将对象序列化的过程，对象的输入流将指定序列化好的文件读出来的过程，就是对象反序列化的过程。既然对象的输出流将对象写入到文件中称之为对象的序列化，那么可想而知对象所对应的class必须要实现Serializable接口。（查看源码可得知：Serializable接口没有任何的方法，只是作为一个标识接口存在）。</p>
+<pre><code>public class Demo23 {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
+       ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(&quot;aa.txt&quot;));
+        Person p1 = new Person(&quot;qqq&quot;,20);
+        Person p2 = new Person(&quot;www&quot;,20);
+        oos.writeObject(p1);
+        oos.writeObject(p2);//也可以把多个对象加入list在存入文件中writeObject(list)
+        oos.close();
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream(&quot;aa.txt&quot;));
+        Person p3 = (Person) ois.readObject();
+        Person p4 = (Person) ois.readObject();//通过foreach读list
+        System.out.println(p3);
+        System.out.println(p4);
+        ois.close();
+    }
+}
+class Person implements Serializable{
+    private String name;
+    private int age;
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return &quot;name=&quot;+name+&quot; &quot;+&quot;age=&quot;+age;
+    }
+}
+</code></pre><h3 id="12-Properties用于读取配置文件"><a href="#12-Properties用于读取配置文件" class="headerlink" title="12.Properties用于读取配置文件"></a>12.Properties用于读取配置文件</h3><pre><code>public class Demo24 {
+    public static void main(String[] args) throws IOException {
+        Properties prop = new Properties();//用于读取配置文件
+        prop.load(new FileInputStream(&quot;com.properties&quot;));//加载配置文件
+        prop.setProperty(&quot;tel&quot;,&quot;18952122212&quot;);//修改文件内容
+        prop.store(new FileOutputStream(&quot;com.properties&quot;),&quot;jkv&quot;);//重写刷新文件，第二个参数用来描述文件列表的
+        System.out.println(prop);
+    }
+}
+</code></pre><h2 id="二-I-O流的简单应用"><a href="#二-I-O流的简单应用" class="headerlink" title="二. I/O流的简单应用"></a>二. I/O流的简单应用</h2><h3 id="1-简单的文件加密"><a href="#1-简单的文件加密" class="headerlink" title="1.简单的文件加密"></a>1.简单的文件加密</h3><pre><code>public class Demo8 {
+    public static void main(String[] args)throws IOException {
+        BufferedInputStream bis = new BufferedInputStream(new FileInputStream(&quot;xxxx.txt&quot;));
+        BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(&quot;xxxxx.txt&quot;));
+        int b;
+        while ((b=bis.read())!=-1){
+            bos.write(b ^ 123);//异或一个数，这个数就是秘钥，解密再次异或就行
+        }
+        bis.close();
+        bos.close();
+    }
+}
+</code></pre><p> 通过对每次读入字节异或一个特定数，原理是一个数异或一数两次等于本身。那个特定的数就是秘钥。想要解密就在读一次并且异或一次。</p>
+<h3 id="2-拷贝一个文件"><a href="#2-拷贝一个文件" class="headerlink" title="2.拷贝一个文件"></a>2.拷贝一个文件</h3><pre><code>public class Demo9 {
+    public static void main(String[] args)throws IOException{
+        File file = getfile();
+        BufferedInputStream bis = new BufferedInputStream(new FileInputStream(file));
+        BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file.getName()));
+        int b;
+        while ((b=bis.read())!=-1){
+            bos.write(b);
+        }
+        bis.close();
+        bos.close();
+    }
+    public static File getfile(){
+        Scanner in = new Scanner(System.in);
+        while (true){
+            String line = in.nextLine();
+            File file = new File(line);
+            if (!file.exists()){
+                System.out.println(&quot;文件路径不存在，重新录入&quot;);
+            }
+            else if (file.isDirectory()){
+                System.out.println(&quot;文件夹路径，重新录入&quot;);
+            }
+            else {
+                return file;
+            }
+        }
+    }
+}
+</code></pre><h3 id="3-统计文件中各个字符的个数"><a href="#3-统计文件中各个字符的个数" class="headerlink" title="3.统计文件中各个字符的个数"></a>3.统计文件中各个字符的个数</h3><pre><code>public class Demo15 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader(&quot;zzz.txt&quot;));
+        Map&lt;Character, Integer&gt; tm = new TreeMap&lt;&gt;();
+        int ch;
+        while ((ch=br.read())!=-1){
+            char c = (char)ch;
+            tm.put(c,!tm.containsKey(c)? 1:tm.get(c)+1);
+        }
+        br.close();
+        BufferedWriter bw = new BufferedWriter(new FileWriter(&quot;times.txt&quot;));
+        for (Character key:tm.keySet()) {
+            switch (key){
+                case &apos;\t&apos;:
+                    bw.write(&quot;\\t&quot; +&quot;=&quot;+tm.get(key));
+                    break;
+                case &apos;\n&apos;:
+                    bw.write(&quot;\\n&quot; +&quot;=&quot;+tm.get(key));
+                    break;
+                case &apos;\r&apos;:
+                    bw.write(&quot;\\r&quot; +&quot;=&quot;+tm.get(key));
+                    break;
+                default:
+                    bw.write(key +&quot;=&quot;+tm.get(key));
+            }
+            bw.newLine();
+        }
+        bw.close();
+    }
+}
+</code></pre><p>switch部分因为在输出\r,\n,\t,特殊符号系统默认换行制表等所以在switch中进行转义。</p>
+<h3 id="4-使用新软件提示使用次数"><a href="#4-使用新软件提示使用次数" class="headerlink" title="4.使用新软件提示使用次数"></a>4.使用新软件提示使用次数</h3><pre><code>public class Demo16 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader(&quot;xxxx.txt&quot;));
+        String line;
+        line = br.readLine();
+        br.close();
+        int time = Integer.parseInt(line);
+        if (time&gt;0){
+            System.out.println(&quot;您还有&quot;+time--+&quot;次机会&quot;);
+        }else{
+            System.out.println(&quot;使用次数使用完，请购买正版软件&quot;);
+        }
+        FileWriter fw = new FileWriter(&quot;xxxx.txt&quot;);
+        fw.write(time+&quot;&quot;);
+        fw.close();
+    }
+}
+</code></pre><p>只能通过read.Line()读取，通过读入一个字节或字符不能还原一个int型数字比如10，每次读一个字节就是1,0不能真实显示，故使用读一行在转int型。</p>
+<h3 id="5-递归实现获取文件夹中指定后缀的文件"><a href="#5-递归实现获取文件夹中指定后缀的文件" class="headerlink" title="5.递归实现获取文件夹中指定后缀的文件"></a>5.递归实现获取文件夹中指定后缀的文件</h3><pre><code>public class Demo17{
+    public static void main(String[] args) {
+        File dir= getDir();
+        print(dir);
+    }
+    public static File getDir(){
+        Scanner in = new Scanner(System.in);
+        System.out.println(&quot;请输入文件夹路径&quot;);
+        while (true){
+            String line = in.nextLine();
+            File file = new File(line);
+            if (!file.exists()){
+                System.out.println(&quot;文件路径不存在，重新录入&quot;);
+            }
+            else if (file.isFile()){
+                System.out.println(&quot;文件路径，重新录入文件夹路径&quot;);
+            }
+            else {
+                return file;
+            }
+        }
+    }
+    public static void print(File file){
+        File[] arr = file.listFiles();//file中文件夹全部放入arr
+        for (File subfile:arr){
+            if (subfile.isFile()&amp;&amp;subfile.getName().endsWith(&quot;.java&quot;)){
+                System.out.println(subfile);
+            }else if (subfile.isDirectory()){
+                print(subfile);
+            }
+        }
+    }
+}
+</code></pre><h3 id="6-递归打印文件夹树形目录"><a href="#6-递归打印文件夹树形目录" class="headerlink" title="6.递归打印文件夹树形目录"></a>6.递归打印文件夹树形目录</h3><pre><code>public class Didui4 {
+    public static void main(String[] args) {
+        File dir = Digui.getDir();//获取文件夹路径
+        printLev(dir,0);
+    }
+
+    private static void printLev(File dir,int lev) {
+        File[] subs = dir.listFiles();
+        for (File sub:subs) {
+            for (int i=0;i&lt;lev;i++){
+                System.out.print(&quot;\t&quot;);
+            }
+            System.out.println(sub.getName());
+            if (sub.isDirectory()){
+                printLev(sub,lev+1);
+            }
+        }
+    }
+}
+</code></pre><h3 id="7-统计文件夹大小"><a href="#7-统计文件夹大小" class="headerlink" title="7.统计文件夹大小"></a>7.统计文件夹大小</h3><pre><code>public class Digui {
+    public static void main(String[] args) {
+        File dir = getDir();
+        System.out.println(getFilelength(dir));
+    }
+    public static File getDir(){
+        Scanner in = new Scanner(System.in);
+        System.out.println(&quot;请输入文件夹路径&quot;);
+        while (true){
+            String line = in.nextLine();
+            File file = new File(line);
+            if (!file.exists()){
+                System.out.println(&quot;文件路径不存在，重新录入&quot;);
+            }
+            else if (file.isFile()){
+                System.out.println(&quot;文件路径，重新录入文件夹路径&quot;);
+            }
+            else {
+                return file;
+            }
+        }
+    }
+    public static long getFilelength(File dir){
+        long len = 0;
+        File[] subfiles = dir.listFiles();
+        for (File subfile:subfiles) {
+            if (subfile.isFile()){
+                len+=subfile.length();
+            }else {
+                len+=getFilelength(subfile);
+            }
+        }
+        return len;
+    }
+}
+</code></pre><h3 id="8-删除文件夹"><a href="#8-删除文件夹" class="headerlink" title="8.删除文件夹"></a>8.删除文件夹</h3><pre><code>public class Digui2 {
+    /*
+     *键盘接受一个文件夹，并且删除
+     */
+    public static void main(String[] args) {
+        File dir = Digui.getDir();
+        deleteFile(dir);
+    }
+    public static void deleteFile(File dir){
+        File[] subs = dir.listFiles();
+        for (File sub:subs) {
+            if (sub.isFile()){
+                sub.delete();
+            }
+            else {
+                deleteFile(sub);
+            }
+        }
+        dir.delete();
+    }
+}
+</code></pre><h3 id="9-反转文件"><a href="#9-反转文件" class="headerlink" title="9.反转文件"></a>9.反转文件</h3><pre><code>public class Homework2 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader(&quot;zzz.txt&quot;));
+        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+        String line;
+        while ((line=br.readLine())!=null){
+            list.add(line);
+        }
+        br.close();
+        BufferedWriter bw = new BufferedWriter(new FileWriter(&quot;zzzz.txt&quot;));
+        for (int i=list.size()-1;i&gt;=0;i--){
+            bw.write(list.get(i));
+            bw.newLine();
+        }
+        bw.close();
+    }
+}
+</code></pre>
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/DreamRiverForever.github.io/tags/I-O/" rel="tag"># I/O</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/DreamRiverForever.github.io/2018/12/30/FirstDay/" rel="next" title="FirstDay">
+                <i class="fa fa-chevron-left"></i> FirstDay
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/DreamRiverForever.github.io/images/bg.jpg" alt="Deng Yu Wen">
+            
+              <p class="site-author-name" itemprop="name">Deng Yu Wen</p>
+              <p class="site-description motion-element" itemprop="description">爱好Java，希望每天都进步</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/DreamRiverForever.github.io/archives/">
+                
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/DreamRiverForever.github.io/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/DreamRiverForever.github.io/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/DreamRiverForever.github.io/auto.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#I-O流"><span class="nav-number">1.</span> <span class="nav-text">I/O流</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-字节流-amp-amp-字符流"><span class="nav-number">1.1.</span> <span class="nav-text">一.字节流 &amp;&amp; 字符流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-FileInputStream-字节输入流"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.FileInputStream 字节输入流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-FileOutputStream-字符输出流"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.FileOutputStream 字符输出流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-用字节数组来read-amp-write"><span class="nav-number">1.1.3.</span> <span class="nav-text">3.用字节数组来read() &amp; write()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-BufferedInputStream-amp-amp-BufferedOutputStream-带有缓冲区输入输出流"><span class="nav-number">1.1.4.</span> <span class="nav-text">4.BufferedInputStream &amp;&amp; BufferedOutputStream 带有缓冲区输入输出流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-用字节流读-amp-写中文"><span class="nav-number">1.1.5.</span> <span class="nav-text">5.用字节流读 &amp; 写中文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-FileReader-amp-FileWriter-字符流输入输出流"><span class="nav-number">1.1.6.</span> <span class="nav-text">6.FileReader &amp; FileWriter 字符流输入输出流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-LineNumberReader带行号的字符读入流"><span class="nav-number">1.1.7.</span> <span class="nav-text">7.LineNumberReader带行号的字符读入流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-SequenceInputStream合并流"><span class="nav-number">1.1.8.</span> <span class="nav-text">8. SequenceInputStream合并流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-ByteArrayOutputStream内存输出流"><span class="nav-number">1.1.9.</span> <span class="nav-text">9.ByteArrayOutputStream内存输出流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-RandomAccessFile"><span class="nav-number">1.1.10.</span> <span class="nav-text">10. RandomAccessFile</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-ObjectOutputStream-amp-ObjectInputStream对象输入输出流"><span class="nav-number">1.1.11.</span> <span class="nav-text">11.ObjectOutputStream &amp; ObjectInputStream对象输入输出流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-Properties用于读取配置文件"><span class="nav-number">1.1.12.</span> <span class="nav-text">12.Properties用于读取配置文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-I-O流的简单应用"><span class="nav-number">1.2.</span> <span class="nav-text">二. I/O流的简单应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-简单的文件加密"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.简单的文件加密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-拷贝一个文件"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.拷贝一个文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-统计文件中各个字符的个数"><span class="nav-number">1.2.3.</span> <span class="nav-text">3.统计文件中各个字符的个数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-使用新软件提示使用次数"><span class="nav-number">1.2.4.</span> <span class="nav-text">4.使用新软件提示使用次数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-递归实现获取文件夹中指定后缀的文件"><span class="nav-number">1.2.5.</span> <span class="nav-text">5.递归实现获取文件夹中指定后缀的文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-递归打印文件夹树形目录"><span class="nav-number">1.2.6.</span> <span class="nav-text">6.递归打印文件夹树形目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-统计文件夹大小"><span class="nav-number">1.2.7.</span> <span class="nav-text">7.统计文件夹大小</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-删除文件夹"><span class="nav-number">1.2.8.</span> <span class="nav-text">8.删除文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-反转文件"><span class="nav-number">1.2.9.</span> <span class="nav-text">9.反转文件</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Deng Yu Wen</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v6.6.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/DreamRiverForever.github.io/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/DreamRiverForever.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/DreamRiverForever.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/DreamRiverForever.github.io/js/src/utils.js?v=6.6.0"></script>
+
+  <script src="/DreamRiverForever.github.io/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/DreamRiverForever.github.io/js/src/affix.js?v=6.6.0"></script>
+
+  <script src="/DreamRiverForever.github.io/js/src/schemes/pisces.js?v=6.6.0"></script>
+
+
+
+  
+  <script src="/DreamRiverForever.github.io/js/src/scrollspy.js?v=6.6.0"></script>
+<script src="/DreamRiverForever.github.io/js/src/post-details.js?v=6.6.0"></script>
+
+
+
+  
+
+
+  <script src="/DreamRiverForever.github.io/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/DreamRiverForever.github.io/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
