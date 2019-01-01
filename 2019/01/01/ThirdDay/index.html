@@ -97,14 +97,14 @@
 
 
   <meta name="description" content="网络编程">
-<meta name="keywords" content="-UDP -TCP">
+<meta name="keywords" content="UDP,TCP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ThirdDay">
 <meta property="og:url" content="https://yoursite.com/2019/01/01/ThirdDay/index.html">
 <meta property="og:site_name" content="Java">
 <meta property="og:description" content="网络编程">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-01T04:21:35.988Z">
+<meta property="og:updated_time" content="2019-01-01T04:24:04.554Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ThirdDay">
 <meta name="twitter:description" content="网络编程">
@@ -418,7 +418,7 @@
                 
               
 
-              <time title="Created: 2019-01-01 11:57:04 / Modified: 12:21:35" itemprop="dateCreated datePublished" datetime="2019-01-01T11:57:04+08:00">2019-01-01</time>
+              <time title="Created: 2019-01-01 11:57:04 / Modified: 12:24:04" itemprop="dateCreated datePublished" datetime="2019-01-01T11:57:04+08:00">2019-01-01</time>
             
 
             
@@ -554,7 +554,7 @@ class Send extends Thread{
         }
     }
 }
-</code></pre><h2 id="二-TCP"><a href="#二-TCP" class="headerlink" title="二.TCP"></a>二.TCP</h2><p>TCP协议是面向连接的通信协议，即在传输数据前先在发送端和接收端建立逻辑连接，然后再传输数据，它提供了两台计算机之间可靠无差错的数据传输。<br>在TCP连接中必须要明确客户端与服务器端，<br>由客户端向服务端发出连接请求，每次连接的创建都需要经过“三次握手”。<br>第一次握手，客户端向服务器端发出连接请求，等待服务器确认<br>第二次握手，服务器端向客户端回送一个响应，通知客户端收到了连接请求<br>第三次握手，客户端再次向服务器端发送确认信息，确认连接。</p>
+</code></pre><h2 id="二-TCP协议简单实现"><a href="#二-TCP协议简单实现" class="headerlink" title="二.TCP协议简单实现"></a>二.TCP协议简单实现</h2><p>TCP协议是面向连接的通信协议，即在传输数据前先在发送端和接收端建立逻辑连接，然后再传输数据，它提供了两台计算机之间可靠无差错的数据传输。<br>在TCP连接中必须要明确客户端与服务器端，<br>由客户端向服务端发出连接请求，每次连接的创建都需要经过“三次握手”。<br>第一次握手，客户端向服务器端发出连接请求，等待服务器确认<br>第二次握手，服务器端向客户端回送一个响应，通知客户端收到了连接请求<br>第三次握手，客户端再次向服务器端发送确认信息，确认连接。</p>
 <pre><code>public class Dem0_TCP {//客户端
     public static void main(String[] args) throws IOException{
         Scanner in = new Scanner(System.in);//将键盘录入文字上传服务器
@@ -908,7 +908,9 @@ public class TestServer {//服务器
       
         <div class="post-tags">
           
-            <a href="/DreamRiverForever.github.io/tags/UDP-TCP/" rel="tag"># -UDP -TCP</a>
+            <a href="/DreamRiverForever.github.io/tags/UDP/" rel="tag"># UDP</a>
+          
+            <a href="/DreamRiverForever.github.io/tags/TCP/" rel="tag"># TCP</a>
           
         </div>
       
@@ -1039,7 +1041,9 @@ public class TestServer {//服务器
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -1082,7 +1086,7 @@ public class TestServer {//服务器
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#网络编程"><span class="nav-number">1.</span> <span class="nav-text">网络编程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-UDP"><span class="nav-number">1.1.</span> <span class="nav-text">一.UDP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-UDP协议简单实现"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.UDP协议简单实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-多线程实现UDP发送接收"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.多线程实现UDP发送接收</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-TCP"><span class="nav-number">1.2.</span> <span class="nav-text">二.TCP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-TCP-UDP-简单应用"><span class="nav-number">1.3.</span> <span class="nav-text">三.TCP/UDP 简单应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-使用TCP协议将客户端文件上传服务器"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">1.使用TCP协议将客户端文件上传服务器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-使用UDP编写简单的聊天工具"><span class="nav-number">1.3.1.</span> <span class="nav-text">2.使用UDP编写简单的聊天工具</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#网络编程"><span class="nav-number">1.</span> <span class="nav-text">网络编程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-UDP"><span class="nav-number">1.1.</span> <span class="nav-text">一.UDP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-UDP协议简单实现"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.UDP协议简单实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-多线程实现UDP发送接收"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.多线程实现UDP发送接收</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-TCP协议简单实现"><span class="nav-number">1.2.</span> <span class="nav-text">二.TCP协议简单实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-TCP-UDP-简单应用"><span class="nav-number">1.3.</span> <span class="nav-text">三.TCP/UDP 简单应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-使用TCP协议将客户端文件上传服务器"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">1.使用TCP协议将客户端文件上传服务器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-使用UDP编写简单的聊天工具"><span class="nav-number">1.3.1.</span> <span class="nav-text">2.使用UDP编写简单的聊天工具</span></a></li></ol></li></ol></div>
             
 
           </div>
