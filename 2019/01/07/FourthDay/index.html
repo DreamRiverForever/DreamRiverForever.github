@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Java">
 <meta property="og:description" content="XML解析 (一)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-07T09:22:24.237Z">
+<meta property="og:updated_time" content="2019-01-07T09:47:31.432Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FourthDay">
 <meta name="twitter:description" content="XML解析 (一)">
@@ -418,7 +418,7 @@
                 
               
 
-              <time title="Created: 2019-01-07 16:56:27 / Modified: 17:22:24" itemprop="dateCreated datePublished" datetime="2019-01-07T16:56:27+08:00">2019-01-07</time>
+              <time title="Created: 2019-01-07 16:56:27 / Modified: 17:47:31" itemprop="dateCreated datePublished" datetime="2019-01-07T16:56:27+08:00">2019-01-07</time>
             
 
             
@@ -507,7 +507,7 @@
         }
     }
 }
-</code></pre><h3 id="2-创建继承于DefaultHandler的PHandler类"><a href="#2-创建继承于DefaultHandler的PHandler类" class="headerlink" title="2.创建继承于DefaultHandler的PHandler类"></a>2.创建继承于DefaultHandler的PHandler类</h3><p>继承DefaultHandler后重写父类中文件，元素处理的四大方法<br>tartDocument()<br>startElement()<br>characters()<br>endElement()<br>endDocument()</p>
+</code></pre><h3 id="2-创建继承于DefaultHandler的PHandler类"><a href="#2-创建继承于DefaultHandler的PHandler类" class="headerlink" title="2.创建继承于DefaultHandler的PHandler类"></a>2.创建继承于DefaultHandler的PHandler类</h3><p>继承DefaultHandler后重写父类中文件，元素处理的五大方法<br>startDocument()<br>startElement()<br>characters()<br>endElement()<br>endDocument()</p>
 <pre><code>class PHandler extends DefaultHandler{
     private List&lt;Person&gt; personList;
     private Person person;
