@@ -6,7 +6,7 @@
   <link href="/DreamRiverForever.github.io/atom.xml" rel="self"/>
   
   <link href="https://yoursite.com/"/>
-  <updated>2019-01-07T09:47:31.432Z</updated>
+  <updated>2019-01-07T10:11:43.191Z</updated>
   <id>https://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FifthDay</title>
+    <link href="https://yoursite.com/2019/01/07/FifthDay/"/>
+    <id>https://yoursite.com/2019/01/07/FifthDay/</id>
+    <published>2019-01-07T09:54:18.000Z</published>
+    <updated>2019-01-07T10:11:43.191Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;XML解析-二&quot;&gt;&lt;a href=&quot;#XML解析-二&quot; class=&quot;headerlink&quot; title=&quot;XML解析 (二)&quot;&gt;&lt;/a&gt;&lt;center&gt;XML解析 (二)&lt;/center&gt;&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="XML" scheme="https://yoursite.com/categories/XML/"/>
+    
+    
+      <category term="XML" scheme="https://yoursite.com/tags/XML/"/>
+    
+  </entry>
   
   <entry>
     <title>FourthDay</title>
